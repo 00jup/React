@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Momentum App</title>
-</head>
-<body>
-  <div id = "login-form"> <!--여기서 사용한 건 다시 사용하면 안 된다.-->
-    <input type="text", placeholder="What is your name?">
-    <button>Log In</button>
-  </div>
-  <script src="app.js"></script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App</title>
+  </head>
+  <body>
+    <form id="login-form">
+      <!--여기서 사용한 건 다시 사용하면 안 된다.-->
+      <input
+        required
+        maxlength="15"
+        ,
+        type="text"
+        ,
+        placeholder="What is your name?"
+      />
+      <button>Log In</button>
+    </form>
+    <script src="app.js"></script>
+  </body>
 </html>
