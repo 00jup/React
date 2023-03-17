@@ -1,13 +1,16 @@
-//const loginFrom = document.querySelector("#login-form");
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const loginButton = document.querySelector("#login-form button");
 
-alert("MODIFIED");
+//alert("MODIFIED");
+
 loginInput.value = prompt("What is your name?", "name");
 const userName = loginInput.value;
-function onLoginBtnClick() {
+function onLoginBtnClick(event) {
   ///console.dir(loginInput);
   //console.log("Hello", loginInput.value);
+  event.preventDefault();
+  console.log(loginInput.value);
   if (loginInput.value === "") {
     alert("Please write your name");
   } else if (loginInput.value.length > 15) {
@@ -17,5 +20,6 @@ function onLoginBtnClick() {
     console.log("Hello", loginInput.value);
   }
 }
-s;
+//loginForm.addEventListener("submit", onLoginBtnClick);
+
 loginButton.addEventListener("click", onLoginBtnClick);
