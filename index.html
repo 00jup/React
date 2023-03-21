@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Momentum App</title>
   </head>
   <body>
-    <form id="login-form">
+    <form class="hidden" id="login-form">
       <a href="https://u-kkk.tistory.com">Go to blog</a>
-      <!--여기서 사용한 건 다시 사용하면 안 된다.-->
+      <!--class name여기서 사용한 건 다시 사용하면 안 된다.-->
       <input
         required
-        maxlength="15"
+        maxlength="16"
         type="text"
         placeholder="What is your name?"
       />
       <button>Log In</button>
     </form>
+    <h1 id="greeting" class="hidden"></h1>
     <script src="app.js"></script>
   </body>
 </html>
