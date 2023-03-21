@@ -9,7 +9,7 @@ const link = document.querySelector("a");
 loginInput.value = prompt("What is your name?", "name");
 const userName = loginInput.value;
 function onLoginBtnClick(event) {
-  ///console.dir(loginInput);
+  ///console.dir(loginInput·‚·);
   //console.log("Hello", loginInput.value);
   event.preventDefault();
   console.log(loginInput.value);
@@ -24,7 +24,7 @@ function onLoginBtnClick(event) {
 }
 function handleLinkClick(event) {
   event.preventDefault();
-  console.log(event);
+  console.dir(event);
   alert("clecked!");
 }
 //loginForm.addEventListener("submit", onLoginBtnClick);
