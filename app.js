@@ -21,7 +21,7 @@ function onLoginBtnClick(event) {
     //alert("YOUR NAME IS " + loginInput.value);
   }
 }
-
+logint
 const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
@@ -48,6 +48,8 @@ function onLoginSubmit(event) {
 
   console.log(username);
 }
+function paintGreetings()
+
 //loginButton.addEventListener("click", onLoginBtnClick);
 loginForm.addEventListener("submit", onLoginSubmit);
 link.addEventListener("click", handleLinkClick);
