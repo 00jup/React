@@ -1,26 +1,78 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
 
-function App() {
+// function MyButton() {
+//   return <button>I'm a button</button>
+// }
+function Profile() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <h1>{user.name}</h1>
+      <img
+        className="avatar"
+        src={user.imageUrl}
+        alt={'Photo of ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
+  )
 }
 
-export default App;
+function AboutPage() {
+  return (
+    <>
+      <h1>About</h1>
+      <p>
+        Hello there. <br /> How do you do?
+      </p>
+    </>
+  )
+}
+function MyButton() {
+  function handleClick() {
+    alert('You clicked me!')
+  }
+  return <button onClick={handleClick}>click me</button>
+}
+
+const products = [
+  {title: 'cabbage', isFruit: 0, id: 1},
+  {title: 'garlic', isFruit: 0, id: 2},
+  {title: 'apple', isFruit: true, id: 3}
+]
+function ShoppingList() {
+  const listname = products.map(products => (
+    <li key={products.id} style={{color: products.isFruit ? 'magenta' : 'blue'}}>
+      {products.title}
+    </li>
+  ))
+  return (
+    <>
+      <ul>{listname}</ul>
+      <Profile />
+      <MyButton />
+    </>
+  )
+}
+// function App() {
+//   return (
+//     <div>
+//       <h1>Welcome to my app</h1>
+//       <MyButton />
+//       <AboutPage />
+//     </div>
+//   )
+// }
+
+const user = {
+  name: 'Hedy Lamarr',
+  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+  imageSize: 90
+}
+
+//export default Profile
+export default ShoppingList
