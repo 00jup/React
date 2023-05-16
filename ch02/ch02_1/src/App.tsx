@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
+import {useState} from 'react'
 
 // function MyButton() {
 //   return <button>I'm a button</button>
@@ -33,10 +34,12 @@ function AboutPage() {
   )
 }
 function MyButton() {
+  const [count, setCount] = useState(0)
+
   function handleClick() {
-    alert('You clicked me!')
+    setCount(count + 1)
   }
-  return <button onClick={handleClick}>click me</button>
+  return <button onClick={handleClick}>Clicked {count}</button>
 }
 
 const products = [
@@ -45,6 +48,11 @@ const products = [
   {title: 'apple', isFruit: true, id: 3}
 ]
 function ShoppingList() {
+  // const [count, setCount] = useState(0)
+
+  // function handleClick() {
+  //   setCount(count + 1)
+  // }
   const listname = products.map(products => (
     <li key={products.id} style={{color: products.isFruit ? 'magenta' : 'blue'}}>
       {products.title}
@@ -55,9 +63,11 @@ function ShoppingList() {
       <ul>{listname}</ul>
       <Profile />
       <MyButton />
+      <MyButton />
     </>
   )
 }
+
 // function App() {
 //   return (
 //     <div>
